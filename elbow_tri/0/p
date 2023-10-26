@@ -14,11 +14,11 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
-dimensions      [0 2 -2 0 0 0 0];
+dimensions      [0 2 -2 0 0 0 0];//JN: kg^0 m^2 s^-2 K^0 = m^2/s^2 pressure/density
 
-internalField   uniform 0;
+internalField   uniform 0; //Initializing pressure with zero
 
-boundaryField
+boundaryField //boundary condition
 {
     wall-4
     {

@@ -23,13 +23,13 @@ startTime       0;
 
 stopAt          endTime;
 
-endTime         10;
+endTime         75;
 
 deltaT          0.05;
 
 writeControl    timeStep;
 
-writeInterval   20;
+writeInterval   20; //JN: save interval = 20*deltaT = 20*0.05 = 1 s
 
 purgeWrite      0;
 
