@@ -16,6 +16,49 @@ FoamFile
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    samples
+    {
+        scalar
+        {
+            average(myLine,p) 0.1354003971441095;
+            min(myLine,p)   -1.433419972779403;
+            max(myLine,p)   2.272490528919734;
+            average(p)      0.1354003971441095;
+            min(p)          -1.433419972779403;
+            max(p)          2.272490528919734;
+        }
+        label
+        {
+            size(myLine,p)  978;
+            size(p)         978;
+            size(myLine,U)  978;
+            size(U)         978;
+        }
+        vector
+        {
+            average(myLine,U) ( 0.211792 2.34623 -3.80249e-21 );
+            min(myLine,U)   ( -0.778348 1.46096 -5.6047e-19 );
+            max(myLine,U)   ( 0.8799630000000001 3.59464 4.93513e-19 );
+            average(U)      ( 0.211792 2.34623 -3.80249e-21 );
+            min(U)          ( -0.778348 1.46096 -5.6047e-19 );
+            max(U)          ( 0.8799630000000001 3.59464 4.93513e-19 );
+        }
+    }
+}
+
+samples
+{
+    p
+    {
+        file            "<case>/postProcessing/samples/28/myLine_p_U.xy";
+    }
+    U
+    {
+        file            "<case>/postProcessing/samples/28/myLine_p_U.xy";
+    }
+}
 
 
 // ************************************************************************* //

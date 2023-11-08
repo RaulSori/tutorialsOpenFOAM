@@ -1,0 +1,16 @@
+{
+  "file-series-version" : "1.0",
+  "files" : [
+    { "name" : "elbow_0.vtm", "time" : 0 },
+    { "name" : "elbow_20.vtm", "time" : 1 },
+    { "name" : "elbow_40.vtm", "time" : 2 },
+    { "name" : "elbow_60.vtm", "time" : 3 },
+    { "name" : "elbow_80.vtm", "time" : 4 },
+    { "name" : "elbow_100.vtm", "time" : 5 },
+    { "name" : "elbow_120.vtm", "time" : 6 },
+    { "name" : "elbow_140.vtm", "time" : 7 },
+    { "name" : "elbow_160.vtm", "time" : 8 },
+    { "name" : "elbow_180.vtm", "time" : 9 },
+    { "name" : "elbow_200.vtm", "time" : 10 }
+  ]
+}

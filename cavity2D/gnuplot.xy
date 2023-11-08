@@ -1,0 +1,58 @@
+#!/usr/bin/gnuplot    
+reset
+
+#JN: Change resolution here
+set term pngcairo dashed font "Times,20" size 1920,1080
+
+#JN: Change colors here
+set style line 1 lt 1 lw 4 linecolor rgb "red"
+set style line 2 lt 1 lw 4 linecolor rgb "#AA0095"
+set style line 3 lt 1 lw 4 linecolor rgb "#228B22"
+set style line 4 lt 1 lw 4 linecolor rgb "#008ECC"
+set style line 5 lt 1 lw 4 linecolor rgb "#006A99"
+set style line 6 lt 1 lw 3 linecolor rgb "#004766"
+set style line 7 lt 1 lw 3 linecolor rgb "#F5FF00"
+set style line 8 lt 1 lw 3 linecolor rgb "#E64600"
+set style line 9 lt 1 lw 3 linecolor rgb "#CC3E00"
+set style line 10 lt 1 lw 3 linecolor rgb "#B23600"
+set style line 99 lt 1 lw 3 linecolor rgb "black"
+
+set key outside center top horizontal
+
+#JN: change filename here
+set output '1.png'
+
+#JN: change axes here
+set grid
+set logscale y
+#set xlabel "x [m]" font "Times Bold,20"
+#set ylabel "velocity [m/s]"  font "Times Bold,20"
+#set xrange [-5:5] 
+#set xtics 1
+#set yrange [0:300] 
+#set ytics 25
+
+plot "logs/p_0" using ($1):($2) w l ls 1, \
+	 "logs/pFinalRes_0" using ($1):($2) w l ls 2
+
+	 
+
+reset
+
+#JN: change filename here
+set output '2.png'
+
+#JN: change axes here
+set grid
+#set xlabel "x [m]" font "Times Bold,20"
+#set ylabel "velocity [m/s]"  font "Times Bold,20"
+#set xrange [-5:5] 
+#set xtics 1
+#set yrange [0:300] 
+#set ytics 25
+
+plot "logs/CourantMax_0" u 1:2 w l 
+
+set logscale y
+
+plot [30:50][] "logs/Ux_0" u 1:2 w l title "Ux","logs/Uy_0" u 1:2 w l title "Uy"

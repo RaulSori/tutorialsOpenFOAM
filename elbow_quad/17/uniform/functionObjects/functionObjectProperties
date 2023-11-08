@@ -1,7 +1,7 @@
 /*--------------------------------*- C++ -*----------------------------------*\
 | =========                 |                                                 |
 | \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
-|  \\    /   O peration     | Version:  v2012                                 |
+|  \\    /   O peration     | Version:  2306                                  |
 |   \\  /    A nd           | Website:  www.openfoam.com                      |
 |    \\/     M anipulation  |                                                 |
 \*---------------------------------------------------------------------------*/
@@ -9,12 +9,56 @@ FoamFile
 {
     version     2.0;
     format      ascii;
+    arch        "LSB;label=32;scalar=64";
     class       dictionary;
     location    "17/uniform/functionObjects";
     object      functionObjectProperties;
 }
 // * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
 
+cdf7e925f5746741c316f5fbcf39ad0dfca90775
+{
+    samples
+    {
+        scalar
+        {
+            average(myLine,p) -0.0131499632705793;
+            min(myLine,p)   -0.8926862113825744;
+            max(myLine,p)   1.37981898596174;
+            average(p)      -0.0131499632705793;
+            min(p)          -0.8926862113825744;
+            max(p)          1.37981898596174;
+        }
+        label
+        {
+            size(myLine,p)  978;
+            size(p)         978;
+            size(myLine,U)  978;
+            size(U)         978;
+        }
+        vector
+        {
+            average(myLine,U) ( 0.161715 2.16936 -2.12632e-22 );
+            min(myLine,U)   ( -0.676049 1.09419 -5.12995e-19 );
+            max(myLine,U)   ( 0.992852 3.56175 4.18461e-19 );
+            average(U)      ( 0.161715 2.16936 -2.12632e-22 );
+            min(U)          ( -0.676049 1.09419 -5.12995e-19 );
+            max(U)          ( 0.992852 3.56175 4.18461e-19 );
+        }
+    }
+}
+
+samples
+{
+    p
+    {
+        file            "<case>/postProcessing/samples/17/myLine_p_U.xy";
+    }
+    U
+    {
+        file            "<case>/postProcessing/samples/17/myLine_p_U.xy";
+    }
+}
 
 
 // ************************************************************************* //
